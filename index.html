@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2023</title>
+  </head>
+  <body>
+    <h1>Tetris</h1>
+    <main id="main" class="flex row">
+      <svg id="svgCanvas">
+        <!-- game over text box -->
+        <g id="gameOver" visibility="hidden">
+          <rect x="26" y="120" fill="white" height="48" width="149"></rect>
+          <text x="36" y="150">Game Over</text>
+        </g>
+      </svg>
+      <div id="sideBar" class="flex col">
+        <svg id="svgPreview"></svg>
+        <div id="info" class="flex col">
+          <div class="text">
+            <span class="left">Level: </span>
+            <span class="right" id="levelText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Score: </span>
+            <span class="right" id="scoreText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Highscore: </span>
+            <span class="right" id="highScoreText">...</span>
+          </div>
+          <!-- Add the table here inside flex col -->
+          <div id="instructions" class="flex col">
+            <h3>How to Play</h3>
+            <table>
+              <tr>
+                <td>Move Left</td>
+                <td>
+                  <div id="MoveLeft" class="key" style="width:50px">KeyA</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Move Right</td>
+                <td>
+                  <div id="MoveRight" class="key" style="width:50px">KeyD</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Move Down</td>
+                <td>
+                  <div id="MoveDown" class="key" style="width:50px">KeyS</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Rotate</td>
+                <td>
+                  <div id="Rotate" class="key" style="width:50px">KeyW</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Restart Game</td>
+                <td>
+                  <div id="Enter" class="key" style="width:50px">Enter</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        
+      </div>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
